@@ -1,0 +1,8 @@
+{
+  "name": "לא שכחנו - הולכים להצביע | לבחירה הנכונה",
+  "description": "בחרו את הסיבה שלכם לצאת ולהצביע בבחירות השבוע ושתפו את כרזת המחאה ברשתות החברתיות לבחירה הנכונה.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
