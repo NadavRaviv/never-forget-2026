@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Vote, MapPin, CheckCircle2, Sun, Moon, Globe, Check, ChevronDown, Sparkles } from 'lucide-react';
+import { Vote, CheckCircle2, Sun, Moon, Globe, Check, ChevronDown, Sparkles } from 'lucide-react';
 import { LanguageCode, LANGUAGES, TranslationDict } from '../i18n/translations';
 
 interface HeaderProps {
@@ -219,20 +219,6 @@ export const Header: React.FC<HeaderProps> = ({
             )}
           </div>
 
-          {/* Polling Station Locator button */}
-          <button
-            onClick={onOpenGuide}
-            className={`flex items-center gap-1.5 text-xs sm:text-sm font-medium border px-2.5 sm:px-3 py-2 rounded-xl transition-colors cursor-pointer ${
-              isLight
-                ? 'bg-white hover:bg-neutral-100 text-neutral-800 border-neutral-300'
-                : 'bg-neutral-900 hover:bg-neutral-800 text-neutral-200 border-neutral-700'
-            }`}
-            title={t.whereToVote}
-          >
-            <MapPin className="w-4 h-4 text-red-500 shrink-0" />
-            <span className="hidden sm:inline">{t.whereToVote}</span>
-            <span className="sm:hidden">{t.pollingShort}</span>
-          </button>
 
           {/* Citizen pledge button */}
           <button
