@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Vote, CheckCircle2, Sun, Moon, Globe, Check, ChevronDown, Sparkles } from 'lucide-react';
+import { Sun, Moon, Globe, Check, ChevronDown, Sparkles } from 'lucide-react';
 import { LanguageCode, LANGUAGES, TranslationDict } from '../i18n/translations';
 
 interface HeaderProps {
@@ -106,15 +106,15 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Action items on the navbar */}
         <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-          {/* New "Want to create your own poster?" button */}
+          {/* 2X Bigger "Want to create your own poster?" button */}
           <button
             type="button"
             onClick={onOpenPosterCreator}
-            className="flex items-center gap-1.5 text-xs sm:text-sm font-extrabold px-2.5 sm:px-3 py-2 rounded-xl transition-all cursor-pointer bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white shadow-md shadow-red-600/20 active:scale-95 border border-red-500"
+            className="flex items-center gap-2.5 text-sm sm:text-base md:text-lg font-black px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-2xl transition-all cursor-pointer bg-gradient-to-r from-red-600 via-rose-600 to-red-600 hover:from-red-500 hover:to-rose-500 text-white shadow-xl shadow-red-600/35 hover:shadow-red-600/50 hover:scale-105 active:scale-95 border-2 border-red-400/80 animate-pulse-subtle"
             title={t.createPosterBtn}
           >
-            <Sparkles className="w-4 h-4 text-amber-300 shrink-0" />
-            <span className="whitespace-nowrap">{t.createPosterBtn}</span>
+            <Sparkles className="w-5 h-5 sm:w-6 h-6 text-amber-300 shrink-0 animate-bounce" />
+            <span className="whitespace-nowrap tracking-tight">{t.createPosterBtn}</span>
           </button>
 
           {/* 1. Dark / Light Mode Switcher (Swapped inward) */}
@@ -220,27 +220,7 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
 
-          {/* Citizen pledge button */}
-          <button
-            onClick={onPledge}
-            className={`flex items-center gap-1.5 text-xs sm:text-sm font-bold px-3 py-2 rounded-xl transition-all cursor-pointer shadow-md shrink-0 ${
-              hasPledged
-                ? 'bg-emerald-600 text-white border border-emerald-500'
-                : 'bg-red-600 hover:bg-red-500 text-white border border-red-500 active:scale-95'
-            }`}
-          >
-            {hasPledged ? (
-              <>
-                <CheckCircle2 className="w-4 h-4" />
-                <span className="hidden xs:inline">{t.pledgedBtn}</span>
-              </>
-            ) : (
-              <>
-                <Vote className="w-4 h-4" />
-                <span className="hidden xs:inline">{t.pledgeBtn}</span>
-              </>
-            )}
-          </button>
+
         </div>
       </div>
 
